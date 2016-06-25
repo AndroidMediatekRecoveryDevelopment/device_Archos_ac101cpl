@@ -1,5 +1,5 @@
 # Release name
-PRODUCT_RELEASE_NAME := ac101cpl
+PRODUCT_RELEASE_NAME := MTKAC101CPL
 
 $(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
@@ -12,7 +12,7 @@ TARGET_SCREEN_WIDTH := 1280
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ac101cpl
-PRODUCT_NAME := MTKAC101CPL
+PRODUCT_NAME := ac101cpl
 PRODUCT_BRAND := Archos
-PRODUCT_MODEL := Archos_101c_Platinum
+PRODUCT_MODEL := Archos 101c Platinum
 PRODUCT_MANUFACTURER := Archos

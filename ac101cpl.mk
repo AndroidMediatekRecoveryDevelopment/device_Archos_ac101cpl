@@ -21,10 +21,10 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
-PRODUCT_NAME := MTKAC101CPL
+PRODUCT_NAME := ac101cpl
 PRODUCT_DEVICE := ac101cpl
 PRODUCT_BRAND := Archos
-PRODUCT_MODEL := Archos_101c_Platinum
+PRODUCT_MODEL := Archos 101c Platinum
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
 ro.adb.secure=0 \
@@ -33,12 +33,10 @@ persist.service.acm.enable=0 \
 ro.secure=0 \
 ro.allow.mock.location=1 \
 ro.debuggable=1 \
-ro.zygote=zygote64_32 \
+ro.zygote=zygote32 \
 ro.mount.fs=EXT4 \
-camera.disable_zsl_mode=1 \
 dalvik.vm.dex2oat-Xms=64m \
 dalvik.vm.dex2oat-Xmx=512m \
 dalvik.vm.image-dex2oat-Xms=64m \
 dalvik.vm.image-dex2oat-Xmx=64m \
-ro.dalvik.vm.native.bridge=0 \
-ro.sf.lcd_density=320
+ro.dalvik.vm.native.bridge=0

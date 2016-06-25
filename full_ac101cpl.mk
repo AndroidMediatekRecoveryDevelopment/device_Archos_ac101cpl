@@ -16,7 +16,7 @@
 $(call inherit-product, device/Archos/ac101cpl/ac101cpl.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-PRODUCT_NAME := full_MTKAC101CPL
+PRODUCT_NAME := MTKAC101CPL
 PRODUCT_DEVICE := ac101cpl
 PRODUCT_BRAND := Archos
-PRODUCT_MODEL := Archos_101c_Platinum_Base
+PRODUCT_MODEL := Archos 101c Platinum
