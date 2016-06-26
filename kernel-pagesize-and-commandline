@@ -1,0 +1,15 @@
+kernel comments
+
+ Kernel Size                : 3726584 bytes
+ Kernel Base Address        : 0x80000000
+ Ramdisk Size               : 795259 bytes
+ Ramdisk Load Address       : 0x84000000
+ Second Stage Size          : 0 bytes
+ Second Stage Load Address  : 0x80f00000
+ Page Size                  : 2048 bytes
+ ASCIIZ Product Name        : (None)
+
+ Command Line: (None)
+
+
+Press Enter to continue
