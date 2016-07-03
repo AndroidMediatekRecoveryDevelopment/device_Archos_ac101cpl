@@ -1,9 +1,9 @@
-LOCAL_PATH := device/Archos/ac101cpl
+LOCAL_PATH := device/archos/ac101cpl
 
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/Archos/ac101cpl/BoardConfigVendor.mk
+-include vendor/archos/ac101cpl/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := ac101cpl
@@ -34,7 +34,7 @@ BUILD_NUMBER := $(shell date +%s)
 BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_RAMDISK_OFFSET := 0x04000000
 BOARD_TAGS_OFFSET := 0x00000100
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := (None)
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_TAGS_OFFSET)
@@ -65,19 +65,19 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_565"
 DEVICE_SCREEN_WIDTH := 1280
 DEVICE_SCREEN_HEIGHT := 800
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
-TARGET_RECOVERY_LCD_BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
+TARGET_RECOVERY_LCD_BACKLIGHT_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
 
-RECOVERY_VARIANT := carliv
 
 ifneq ($(RECOVERY_VARIANT),twrp)
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/etc/recovery.fstab
+TARGET_RECOVERY_INITRC := $(LOCAL_PATH)/recovery/etc/init.mt8127.rc
 endif
 
 # CARLIV
 ifeq ($(RECOVERY_VARIANT),carliv)
 VIBRATOR_TIMEOUT_FILE := /sys/devices/virtual/timed_output/vibrator/enable
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"font_16x35.h\"
-DEVICE_RESOLUTION := 1280x800
+DEVICE_RESOLUTION := 800x1280
 BOARD_INCLUDE_CRYPTO := true
 BOARD_HAS_MTK_CPU := true
 endif
@@ -86,7 +86,7 @@ ifeq ($(RECOVERY_VARIANT),twrp)
 TW_NO_REBOOT_BOOTLOADER := true
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/etc/twrp.fstab
 TW_THEME := portrait_hdpi
-TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
