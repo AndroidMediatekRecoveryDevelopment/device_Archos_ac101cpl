@@ -5,18 +5,31 @@
 # mount point	fstype    device    	[device2]    fs_options    [fs_options2]    lun
 
 /boot           emmc      /dev/bootimg
-/ebr1           emmc      /dev/ebr1               
-/cache	        ext4	  /dev/block/mmcblk0p6
 /recovery       emmc      /dev/recovery
-/system	        ext4	  /dev/block/mmcblk0p5
+/system	        ext4	  /dev/block/mmcblk0p5               
+/cache	        ext4	  /dev/block/mmcblk0p6
 /data	        ext4	  /dev/block/mmcblk0p7
 /internal_sd	datamedia /dev/null
 /sdcard	        vfat	  /dev/block/mmcblk1p1	/dev/block/mmcblk1	lun=sys/class/android_usb/android0/f_mass_storage/lun/file
 /usb-otg	auto	  /dev/block/sda1	/dev/block/sda
 
 # MTK partitions define
-/uboot          emmc      /dev/uboot              
-/logo           emmc      /dev/logo                             
-/sec_ro         emmc      /dev/sec_ro   
-
+/mbr            emmc      /dev/mrb             
+/ebr1           emmc      /dev/block/mmcblk0p1
+/pro_info       emmc      /dev/pro_info              
+/nvram          emmc      /dev/nvram 
+/protect_f      emmc      /dev/block/mmcblk0p2             
+/protect_s      emmc      /dev/block/mmcblk0p3
+/seccfg         emmc      /dev/seccfg             
+/uboot          emmc      /dev/uboot
+/sec_ro         emmc      /dev/block/mmcblk0p4              
+/misc           emmc      /dev/misc
+/logo           emmc      /dev/logo             
+/expdb          emmc      /dev/expdb 
+/tee1           emmc      /dev/tee1              
+/tee2           emmc      /dev/tee2
+/kb             emmc      /dev/kb
+/dkb            emmc      /dev/dkb
+/frp            emmc      /dev/frp
+                              
 
