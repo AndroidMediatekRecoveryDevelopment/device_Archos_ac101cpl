@@ -51,7 +51,14 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
 BOARD_HAS_LARGE_FILESYSTEM := true
 
-# USB OTG and External Sdcard
+# MTK SPECIFICS
+BOARD_HAS_MTK_CPU := true
+BOARD_NEEDS_MTK_GETSIZE := true
+BOARD_CUSTOM_BOOTIMG := true
+BOARD_CUSTOM_MKBOOTIMG := mtkbootimg
+BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/bootimg.mk
+
+
 TARGET_USES_EXFAT := true
 TARGET_USES_NTFS := true
 
@@ -61,11 +68,11 @@ BOARD_EGL_CFG := $(LOCAL_PATH)/egl.cfg
 
 # RECOVERY
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_565"
-DEVICE_SCREEN_WIDTH := 1280
-DEVICE_SCREEN_HEIGHT := 800
+DEVICE_SCREEN_WIDTH := 800
+DEVICE_SCREEN_HEIGHT := 1280
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
-TARGET_RECOVERY_LCD_BACKLIGHT_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
+TARGET_RECOVERY_LCD_BACKLIGHT_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightnes
+
 
 
 ifneq ($(RECOVERY_VARIANT),twrp)
@@ -79,14 +86,14 @@ VIBRATOR_TIMEOUT_FILE := /sys/devices/virtual/timed_output/vibrator/enable
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"font_16x35.h\"
 DEVICE_RESOLUTION := 800x1280
 BOARD_INCLUDE_CRYPTO := true
-BOARD_HAS_MTK_CPU := true
 endif
 # TWRP
 ifeq ($(RECOVERY_VARIANT),twrp)
 TW_NO_REBOOT_BOOTLOADER := true
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/etc/twrp.fstab
 TW_THEME := portrait_hdpi
-TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
+DEVICE_RESOLUTION := 800x1280
+TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightnes
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true

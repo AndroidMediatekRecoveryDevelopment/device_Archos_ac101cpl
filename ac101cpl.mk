@@ -5,9 +5,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/Archos/ac101cpl/ac101cpl-vendor.mk)
+$(call inherit-product-if-exists, vendor/archos/ac101cpl/ac101cpl-vendor.mk)
 
-LOCAL_PATH := device/Archos/ac101cpl
+LOCAL_PATH := device/archos/ac101cpl
 
 # overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -21,6 +21,8 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 1280
 PRODUCT_NAME := ac101cpl
 PRODUCT_DEVICE := ac101cpl
 PRODUCT_BRAND := Archos

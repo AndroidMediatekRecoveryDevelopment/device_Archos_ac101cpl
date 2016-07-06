@@ -4,7 +4,7 @@ PRODUCT_RELEASE_NAME := MTKAC101CPL
 $(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/Archos/ac101cpl/ac101cpl.mk)
+$(call inherit-product, device/archos/ac101cpl/ac101cpl.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 800
