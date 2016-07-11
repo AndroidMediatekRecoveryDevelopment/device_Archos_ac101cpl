@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/Archos/ac101cpl/ac101cpl.mk)
+$(call inherit-product, device/archos/ac101cpl/ac101cpl.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 PRODUCT_NAME := MTKAC101CPL

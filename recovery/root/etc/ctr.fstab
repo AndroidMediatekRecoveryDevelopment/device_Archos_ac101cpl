@@ -4,19 +4,32 @@
 
 # mount point	fstype    device    	[device2]    fs_options    [fs_options2]    lun
 
-/boot	emmc	/dev/block/platform/mtk-msdc.0/by-name/boot
-/cache	ext4	/dev/block/platform/mtk-msdc.0/by-name/cache
-/recovery	emmc	/dev/block/platform/mtk-msdc.0/by-name/recovery
-/system	ext4	/dev/block/platform/mtk-msdc.0/by-name/system
-/data	ext4	/dev/block/platform/mtk-msdc.0/by-name/userdata
-/internal_sd	datamedia	/dev/null
-/sdcard	vfat	/dev/block/mmcblk1p1	/dev/block/mmcblk1	lun=sys/class/android_usb/android0/f_mass_storage/lun/file
-/usb-otg	auto	/dev/block/sda1	/dev/block/sda
+/boot           emmc      /dev/bootimg
+/recovery       emmc      /dev/recovery
+/system	        ext4	  /dev/block/mmcblk0p5               
+/cache	        ext4	  /dev/block/mmcblk0p6
+/data	        ext4	  /dev/block/mmcblk0p7
+/internal_sd	datamedia /dev/null
+/sdcard	        vfat	  /dev/block/mmcblk1p1	/dev/block/mmcblk1	lun=sys/class/android_usb/android0/f_mass_storage/lun/file
+/usb-otg	auto	  /dev/block/sda1	/dev/block/sda
 
 # MTK partitions define
-/uboot	emmc	/dev/block/platform/mtk-msdc.0/by-name/lk
-/logo	emmc	/dev/block/platform/mtk-msdc.0/by-name/logo
-/nvram	emmc	/dev/block/platform/mtk-msdc.0/by-name/nvram
-/nvdata	ext4	/dev/block/platform/mtk-msdc.0/by-name/nvdata
-/secro	emmc	/dev/block/platform/mtk-msdc.0/by-name/secro
-/metadata	emmc	/dev/block/platform/mtk-msdc.0/by-name/metadata
+/mbr            emmc      /dev/mrb             
+/ebr1           emmc      /dev/block/mmcblk0p1
+/pro_info       emmc      /dev/pro_info              
+/nvram          emmc      /dev/nvram 
+/protect_f      emmc      /dev/block/mmcblk0p2             
+/protect_s      emmc      /dev/block/mmcblk0p3
+/seccfg         emmc      /dev/seccfg             
+/uboot          emmc      /dev/uboot
+/sec_ro         emmc      /dev/block/mmcblk0p4              
+/misc           emmc      /dev/misc
+/logo           emmc      /dev/logo             
+/expdb          emmc      /dev/expdb 
+/tee1           emmc      /dev/tee1              
+/tee2           emmc      /dev/tee2
+/kb             emmc      /dev/kb
+/dkb            emmc      /dev/dkb
+/frp            emmc      /dev/frp
+                              
+

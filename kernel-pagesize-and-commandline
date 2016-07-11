@@ -13,3 +13,5 @@ kernel comments
 
 
 Press Enter to continue
+
+RECOVERY_VARIANT := twrp

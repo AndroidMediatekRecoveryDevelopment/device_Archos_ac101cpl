@@ -12,7 +12,7 @@ $(call inherit-product, device/archos/ac101cpl/device_ac101cpl.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ac101cpl
-PRODUCT_NAME := cm_ac101cpl
-PRODUCT_BRAND := archos
-PRODUCT_MODEL := ac101cpl
-PRODUCT_MANUFACTURER := archos
+PRODUCT_NAME := ac101cpl
+PRODUCT_BRAND := Archos
+PRODUCT_MODEL := Archos 101c Platinum
+PRODUCT_MANUFACTURER := Archos
